@@ -27,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static DatabaseHelper sInstance;
     private static final String TAG = "DatabaseHelper";
     private static final String DATABASE_NAME = "wbcr.db";
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 8;
 
     // Dog Table
     private static final String DOG_TABLE = "dog";
