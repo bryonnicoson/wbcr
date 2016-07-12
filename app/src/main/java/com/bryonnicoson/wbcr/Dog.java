@@ -1,9 +1,11 @@
 package com.bryonnicoson.wbcr;
 
+import java.io.Serializable;
+
 /**
  * Created by bryon on 7/5/16.
  */
-public class Dog {
+public class Dog implements Serializable {
 
     private int id, mix, hasShots, altered, housetrained, specialNeeds, noDogs, noCats;
     private String name, breed, sex, age, size, desc;

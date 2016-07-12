@@ -27,7 +27,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     private static DatabaseHelper sInstance;
     private static final String TAG = "DatabaseHelper";
     private static final String DATABASE_NAME = "wbcr.db";
-    private static final int DATABASE_VERSION = 8;
+    private static final int DATABASE_VERSION = 11;
 
     // Dog Table
     private static final String DOG_TABLE = "dog";
@@ -127,5 +127,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
+//    public Cursor getSearchResults(String search_string) {
+//        SQLiteDatabase db = this.getReadableDatabase();
+//
+//        String WHERE_CLAUSE = "DOG_NAME"
+//    }
 
 }

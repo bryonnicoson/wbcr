@@ -12,6 +12,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,17 +30,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         db = DatabaseHelper.getInstance(this);
+
+        //seedDb();
+
         mDogList = (ListView) findViewById(R.id.dog_card_list_view);
         mCursor = db.showDogs();
         mAdapter = new DogCursorAdapter(this, mCursor, 0);
         mDogList.setAdapter(mAdapter);
+        // mAdapter.notifyDataSetChanged();
 
         mDogClickListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 mDetailIntent = new Intent(MainActivity.this, DogDetailActivity.class);
 
-                View photoView = view.findViewById(R.id.dog_photo);  // need to find view of position
+                // view.findViewById = individual card view
+                View photoView = view.findViewById(R.id.dog_photo);
                 View nameView = view.findViewById(R.id.dog_name);
                 View breedView = view.findViewById(R.id.dog_breed);
                 View sexView = view.findViewById(R.id.dog_sex);
