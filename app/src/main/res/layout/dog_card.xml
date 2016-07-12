@@ -38,6 +38,7 @@
             android:id="@+id/dog_name"
             android:layout_toRightOf="@+id/dog_photo"
             android:layout_alignParentTop="true"
+            android:transitionName="@string/transition_dog_name"
             android:textSize="24sp"
             />
 
@@ -47,6 +48,7 @@
             android:id="@+id/dog_size"
             android:layout_toRightOf="@id/dog_photo"
             android:layout_below="@+id/dog_name"
+            android:transitionName="@string/transition_dog_size"
             android:paddingRight="6dp"
             />
 
@@ -64,6 +66,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/dog_sex"
             android:layout_toRightOf="@+id/dog_age"
+            android:transitionName="@string/transition_dog_sex"
             android:layout_below="@id/dog_name"
             />
 
@@ -71,6 +74,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/dog_breed"
+            android:transitionName="@string/transition_dog_breed"
             android:layout_toRightOf="@id/dog_photo"
             android:layout_below="@+id/dog_size"
             />

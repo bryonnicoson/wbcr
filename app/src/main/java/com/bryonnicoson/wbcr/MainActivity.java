@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.support.v4.util.Pair;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.ListView;
 
 
@@ -41,7 +40,10 @@ public class MainActivity extends AppCompatActivity {
 
                 View photoView = view.findViewById(R.id.dog_photo);  // need to find view of position
                 View nameView = view.findViewById(R.id.dog_name);
-
+                View breedView = view.findViewById(R.id.dog_breed);
+                View sexView = view.findViewById(R.id.dog_sex);
+                View ageView = view.findViewById(R.id.dog_age);
+                View sizeView = view.findViewById(R.id.dog_size);
 
                 String name = mCursor.getString(mCursor.getColumnIndexOrThrow("name"));
                 String breed = mCursor.getString(mCursor.getColumnIndexOrThrow("breed"));
@@ -63,7 +65,11 @@ public class MainActivity extends AppCompatActivity {
 
                 ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this,
                         Pair.create(photoView, getString(R.string.transition_dog_photo)),
-                        Pair.create(nameView, getString(R.string.transition_dog_name)));
+                        Pair.create(nameView, getString(R.string.transition_dog_name)),
+                        Pair.create(breedView, getString(R.string.transition_dog_breed)),
+                        Pair.create(ageView, getString(R.string.transition_dog_age)),
+                        Pair.create(sizeView, getString(R.string.transition_dog_size)),
+                        Pair.create(sexView, getString(R.string.transition_dog_sex)));
                 ActivityCompat.startActivity(MainActivity.this, mDetailIntent, options.toBundle());
             }
         };

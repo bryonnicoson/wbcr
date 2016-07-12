@@ -44,7 +44,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/dog_name"
                     android:layout_toRightOf="@id/dog_photo"
-                    android:paddingRight="6dp" />
+                    android:transitionName="@string/transition_dog_size"
+                    android:paddingRight="6dp"
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/dog_age"
@@ -52,27 +54,34 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/dog_name"
                     android:layout_toRightOf="@+id/dog_size"
-                    android:paddingRight="6dp" />
+                    android:transitionName="@string/transition_dog_age"
+                    android:paddingRight="6dp"
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/dog_sex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/dog_name"
-                    android:layout_toRightOf="@+id/dog_age" />
+                    android:transitionName="@string/transition_dog_sex"
+                    android:layout_toRightOf="@+id/dog_age"
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:id="@+id/dog_breed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/dog_size"
-                    android:layout_toRightOf="@id/dog_photo" />
+                    android:transitionName="@string/transition_dog_breed"
+                    android:layout_toRightOf="@id/dog_photo"
+                    android:textSize="18sp"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/dog_photo"
-                    android:id="@+id/dog_desc"/>
+                    android:id="@+id/dog_desc"
+                    android:textSize="18sp"/>
             </RelativeLayout>
 
     </LinearLayout>
