@@ -39,8 +39,8 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 mDetailIntent = new Intent(MainActivity.this, DogDetailActivity.class);
 
-                View photoView = findViewById(R.id.dog_photo);  // need to find view of position
-                View nameView = findViewById(R.id.dog_name);
+                View photoView = view.findViewById(R.id.dog_photo);  // need to find view of position
+                View nameView = view.findViewById(R.id.dog_name);
 
 
                 String name = mCursor.getString(mCursor.getColumnIndexOrThrow("name"));
