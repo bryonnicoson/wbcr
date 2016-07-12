@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">WBCR</string>
+    <string name="app_name">Wishbone Canine Rescue</string>
+    <string name="transition_dog_photo">Dog Photo</string>
+    <string name="transition_dog_name">Dog Name</string>
+    <string name="transition_dog_size">Dog Size</string>
+    <string name="transition_dog_age">Dog Age</string>
+    <string name="transition_dog_sex">Dog Sex</string>
+    <string name="transition_dog_breed">Dog Breed</string>
 </resources>

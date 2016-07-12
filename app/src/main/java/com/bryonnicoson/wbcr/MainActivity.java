@@ -3,10 +3,14 @@ package com.bryonnicoson.wbcr;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v4.util.Pair;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 
@@ -32,10 +36,39 @@ public class MainActivity extends AppCompatActivity {
 
         mDogClickListener = new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                mDetailIntent = new Intent(MainActivity.this, DetailActivity.class)
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+                mDetailIntent = new Intent(MainActivity.this, DogDetailActivity.class);
+
+                View photoView = findViewById(R.id.dog_photo);  // need to find view of position
+                View nameView = findViewById(R.id.dog_name);
+
+
+                String name = mCursor.getString(mCursor.getColumnIndexOrThrow("name"));
+                String breed = mCursor.getString(mCursor.getColumnIndexOrThrow("breed"));
+                String size = mCursor.getString(mCursor.getColumnIndexOrThrow("size"));
+                String age = mCursor.getString(mCursor.getColumnIndexOrThrow("age"));
+                String sex = mCursor.getString(mCursor.getColumnIndexOrThrow("sex"));
+                String desc = mCursor.getString(mCursor.getColumnIndexOrThrow("desc"));
+
+                String uri = "@drawable/" + name.toLowerCase();
+                int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+
+                mDetailIntent.putExtra("PHOTO", imageResource);
+                mDetailIntent.putExtra("NAME", name);
+                mDetailIntent.putExtra("BREED", breed);
+                mDetailIntent.putExtra("AGE", age);
+                mDetailIntent.putExtra("SIZE", size);
+                mDetailIntent.putExtra("SEX", sex);
+                mDetailIntent.putExtra("DESC", desc);
+
+                ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(MainActivity.this,
+                        Pair.create(photoView, getString(R.string.transition_dog_photo)),
+                        Pair.create(nameView, getString(R.string.transition_dog_name)));
+                ActivityCompat.startActivity(MainActivity.this, mDetailIntent, options.toBundle());
             }
-        }
+        };
+
+        mDogList.setOnItemClickListener(mDogClickListener);
     }
 
     public void seedDb() {
