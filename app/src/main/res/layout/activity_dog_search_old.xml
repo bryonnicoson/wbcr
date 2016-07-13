@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.bryonnicoson.wbcr.DogSearchActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_height"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="9dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lead"
+                    android:textSize="18sp"
+                    android:text="I want to rescue a ..."/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_female"
+                    android:text="@string/checkbox_female"
+                    android:layout_below="@id/lead"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:padding="9dp"
+                    android:checked="true"
+                    android:textSize="18sp"/>
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_male"
+                    android:text="@string/checkbox_male"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/lead"
+                    android:layout_toRightOf="@id/checkbox_female"
+                    android:padding="9dp"
+                    android:checked="true"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_small"
+                    android:text="@string/checkbox_small"
+                    android:layout_below="@id/checkbox_female"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:padding="9dp"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_medium"
+                    android:text="@string/checkbox_medium"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/checkbox_female"
+                    android:layout_toRightOf="@id/checkbox_small"
+                    android:checked="true"
+                    android:padding="9dp"
+                    android:textSize="18sp" />
+
+                <android.support.v7.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_large"
+                    android:text="@string/checkbox_large"
+                    android:layout_width="140dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/checkbox_female"
+                    android:layout_toRightOf="@id/checkbox_medium"
+                    android:checked="true"
+                    android:padding="9dp"
+                    android:textSize="18sp" />
+
+                <Spinner
+                    android:id="@+id/spinner_breed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/checkbox_small"
+                    android:spinnerMode="dropdown"></Spinner>
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_dog_search" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@android:drawable/ic_menu_search"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="bottom|end" />
+
+</android.support.design.widget.CoordinatorLayout>

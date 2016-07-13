@@ -1,6 +1,8 @@
 package com.bryonnicoson.wbcr;
 
-
+import android.app.SearchManager;
+import android.support.v7.widget.SearchView;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.support.v4.app.ActivityCompat;
@@ -8,12 +10,12 @@ import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v4.util.Pair;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-
-import java.util.ArrayList;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         mCursor = db.showDogs();
         mAdapter = new DogCursorAdapter(this, mCursor, 0);
         mDogList.setAdapter(mAdapter);
-        // mAdapter.notifyDataSetChanged();
+        mAdapter.notifyDataSetChanged();
 
         mDogClickListener = new AdapterView.OnItemClickListener() {
             @Override
@@ -82,6 +84,51 @@ public class MainActivity extends AppCompatActivity {
         };
 
         mDogList.setOnItemClickListener(mDogClickListener);
+
+        handleIntent(getIntent());
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        return true;
+
+        // Associate searchable configuration with the SearchView
+//        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+//        SearchView searchView = (SearchView) menu.findItem(R.id.search).getActionView();
+//        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
+//        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()) {
+            case R.id.search:
+                Intent intent = new Intent(this, DogSearchActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onNewIntent(Intent intent){
+        handleIntent(intent);
+    }
+
+
+    public void handleIntent(Intent intent){
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())){
+
+            db = DatabaseHelper.getInstance(this);
+            //Cursor results = db.getSearchResults(intent.getStringExtra(SearchManager.QUERY));
+
+
+
+        }
     }
 
     public void seedDb() {

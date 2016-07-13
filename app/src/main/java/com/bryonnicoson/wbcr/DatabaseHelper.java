@@ -127,10 +127,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-//    public Cursor getSearchResults(String search_string) {
-//        SQLiteDatabase db = this.getReadableDatabase();
-//
-//        String WHERE_CLAUSE = "DOG_NAME"
-//    }
-
+    public Cursor getSearchResults(String query, String[] args) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery(query, args);
+        return cursor;
+    }
 }

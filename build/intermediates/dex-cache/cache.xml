@@ -1,2 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
+
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2f7e6e2dad1bccaf68a8820820adc6c0d5b96d37">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-24.0.0_b6ab83235f2afd80ffcb42bc138f5df494cc2ae5/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="894922f67adeaaef51f077a29e315da21a3382d3">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-24.0.0_9e1e2fa5fe5ddf5e866da5a5d59dc0a180492229/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="1f068ebc44bf46660f2512b5b7017c542f8297d4">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_e447f96428034f5d934eb1fa570fdaeeeef39197/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="3bd97cfefd783e9de1dd1c30574a6adb44b4409b">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-24.0.0_2c18439cbe05b3df8509befa65a9cacbc04bbda7/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="e70f608219ed6b974644c333249ab2bb7b71de98">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-24.0.0_b61e4c0cbdd1b588b45b495790d1689fb1275a61/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.0.0/support-annotations-24.0.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="2943c74db6d4346ab8c6531adac91fa05c137c40">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-24.0.0_7a15fd437aaa5b04d2134401fccef1b380d04502/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="0874286cc2fd88d54fdf130e9d5372730da6de97">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-24.0.0_fbc0bea8968065fca7bc92a928db043fc6fa95a9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.0.0/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="fcaf463e10e69c1923ccf1edeba3b4196d239e00">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_444ed0268f7db61efff4a3bf00f4b612bc51b26d/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/exploded-aar/com.android.support/design/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="fc29308a7a8f6d4407b34634eb48fb8b817f9b23">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-24.0.0_83fe179e993106a14e423903a5cd0569545edea4/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="8dd49930e4f9dde1a42d37e362b9fea8b1b69c0d">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-cardview-v7-24.0.0_55e7fd2a29156529fce5aefa8ab2b390a1eb11f9/classes.dex" />
+    </item>
+    <item
+        jar="/Users/bryon/adi/WBCR/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="012c3ccb93add2aa766b0d81864b240ff0224339">
+        <dex dex="/Users/bryon/adi/WBCR/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_2cecb59be5965cd2f08b1f3dfd204b88610edf15/classes.dex" />
+    </item>
+
+</items>
